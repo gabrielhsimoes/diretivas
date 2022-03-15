@@ -1,0 +1,7 @@
+<p>Descrição: {{tarefa.desc }}</p>
+<!-- <p>Responsável: {{ tarefa.responsavel.nome }}</p> -->
+
+<!-- <p>Responsável: {{ tarefa.responsavel != null ? tarefa.responsavel.nome: ''}}</p> -->
+
+<!-- Quando eu coloco o '?' depois da variável ou objeto que pode ter valor null ele entap chama variável nome do objeto do responsavel-->
+<p>Responsável: {{ tarefa.responsavel?.usuario?.nome }}</p>
