@@ -15,13 +15,20 @@
 </p>
 
 <h5>Diretiva Estrutura Customizada - ngElse</h5>
+
 <div *ngIf="mostrarCursos">
     Lista de cursos aqui.
 </div>
 
-<div *ngIf="!mostrarCursos">
+<div *ngElse="mostrarCursos">
     Não existem cursos para serem listados!
 </div>
 
 <br>
 <button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
+
+<ng-template [ngElse]="mostrarCursos">
+    <div> 
+        Não existem cursos para serem listados.
+    </div>
+</ng-template>
